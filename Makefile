@@ -12,11 +12,11 @@ SRC = $(wildcard *.c)
 # -Wall to get all the possible warnings
 # -ansi -pendantic to get portable code
 ifeq ($(DEBUG),yes)
-	CFLAGS=-W -Wall -ansi -pedantic -g -std=c99
-	LDFLAGS= -Wall -lm
+	CFLAGS=-W -Werror=unused-variable -Wall -ansi -pedantic -g -std=c99
+	LDFLAGS= -Werror=unused-variable -Wall -lm
 else
-	CFLAGS=-W -Wall -ansi -pedantic -std=c99 -O3
-	LDFLAGS= -Wall -lm
+	CFLAGS=-W -Werror=unused-variable -Wall -ansi -pedantic -std=c99 -O3
+	LDFLAGS= -Werror=unused-variable -Wall -lm
 endif
 
 ###############################################
