@@ -4,7 +4,7 @@
 // Demo for CI Pipeline autofix
 int main(void)
 {
-    uint8_t foo = 5; /* unused variable */
+    uint8_t foo __attribute__((unused)) = 5; /* intentionally unused variable */
     dependency();
     return 0;
 }
